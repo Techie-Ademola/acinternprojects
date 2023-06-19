@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body id="body">
+    <input type="checkbox" id="checkbox"></input>
+    <label for="checkbox" class="selector">
+        <span class="trigger">
+            <span class="label"></span>
+        </span>
+    </label>
+
+    <div id="wrapper">
+        <div id="formContent">
+            <h2 class="active"> Sign up </h2>
+
+            <!-- Login Form -->
+            <div class="form_wrap">
+                <form>
+                    <div class="user_box">
+                        <label for="fname">First Name*</label>
+                        <input type="text" id="fname" name="fname" required >
+                    </div>
+                    <div class="user_box">
+                        <label for="lname">Last Name*</label>
+                        <input type="text" id="lname" name="lname" required >
+                    </div>
+                    <div class="user_box">
+                        <label for="username">Your unique username*</label>
+                        <input type="text" id="username" name="username" required >
+                    </div>
+                    <div class="user_box">
+                        <label for="email">Your Email*</label>
+                        <input type="email" id="email" name="email" required >
+                    </div>
+                    <div class="user_box">
+                        <label for="password">Password*</label>
+                        <input type="password" id="password" name="password" required >
+                    </div>
+                    <div class="user_box">
+                        <label for="confPassword">Confirm Password*</label>
+                        <input type="password" id="confPassword" name="confPassword" required >
+                    </div>
+                    <div class="user_box">
+                        <input type="submit" onclick=" window.location.href = 'login.html' " class="fourth" value="Sign up">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Signup Option -->
+            <div id="formFooter">
+                <p><i>Already have an account?</i> <a class="" href="./login.html">Sign in</a></p>
+            </div>
+
+        </div>
+    </div>
+    
+    <script>
+        let body = document.querySelector('#body');
+        let checkbox = document.querySelector('#checkbox');
+    
+        checkbox.onclick = function () {
+            body.classList.toggle('daylight')
+        }
+    </script>
+</body>
+
+</html>
